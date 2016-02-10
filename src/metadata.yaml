@@ -1,0 +1,11 @@
+
+---
+title: CSCI 4020U Compilers Assignment 1
+author: "Auth: Kalev Kalda Sikes :: `100425828`"
+date: "Date: `7e0208` / `2016-03-08`"
+header-includes:
+    - \usepackage{fancyhdr}
+    - \pagestyle{fancy}
+    - \fancyfoot[CO,CE]{Kalev Kalda Sikes // 100425828}
+    - \fancyfoot[LE,RO]{\thepage}
+---
