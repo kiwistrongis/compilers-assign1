@@ -1,8 +1,8 @@
 # globals
-default: reports
-freshen: clean reports
+default: build reports
+freshen: clean default
 clean:
-	rm -f bin/*
+	rm -rf bin/* pkg/*
 
 # vars
 warnings =
@@ -21,7 +21,7 @@ $(class_files): bin/%.class : src/%.java
 
 $(pdf_files): bin/%.pdf : src/%.md src/metadata.yaml makefile
 	pandoc \
-		-r markdown+tex_math_single_backslash+link_attributes \
+		-r markdown+link_attributes \
 		src/metadata.yaml $< \
 		-o $@
 #		--template=src/template.tex \
@@ -42,7 +42,8 @@ $(pkg_file): $(pdf_files)
 		rejected.txt \
 
 # commands
-all: reports package
+all: build reports package
+build: $(class_files)
 report: $(pdf_files)
 reports: $(pdf_files)
 package: $(pkg_file)

@@ -57,4 +57,4 @@ S^? \cdot \bigcup_1^\infty D^n \:)^*\)
 ![`(a*)|(ab)+|(a?b+)` DFA](res/q1.4.png){ width=70% }
 
 # Question 2
-Note: As the instructions were unclear regarding newlines, I assumed that any newline in string files demark the end of the string.
+Note: As the instructions were unclear regarding newlines, I assumed that any newline in a string file demarks the end of the string. Additionally, I assumed that states are represented by positive integers in the dfa file.
